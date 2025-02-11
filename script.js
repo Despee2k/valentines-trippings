@@ -10,6 +10,8 @@ const why = () => {
 
     let width = yesBtn.clientWidth;
     let height = yesBtn.clientHeight;
+    let screenWidth = window.innerWidth;
+    let screenHeight = window.innerHeight;
 
     if(clickCount == 4){
         let question = document.getElementById("question");
@@ -23,10 +25,22 @@ const why = () => {
         yesBtn.classList.remove("rounded-md")
     } else {
         noBtn.innerHTML = messages[clickCount - 1];
-        yesBtn.style.width = width * 2;
-        yesBtn.style.height = height * 2;
         yesBtn.classList.remove(size[clickCount - 1]);
         yesBtn.classList.add(size[clickCount]);
+
+        if(width * 2 > screenWidth){
+            yesBtn.style.width = "";
+            yesBtn.classList.add("w-screen");
+        } else {
+            yesBtn.style.width = width * 2;
+        }
+        
+        if(height * 2 > screenHeight){
+            yesBtn.style.height = "";
+            yesBtn.classList.add("h-screen");
+        } else {
+            yesBtn.style.height = height * 2;
+        }
     }
 }
 
