@@ -6,8 +6,16 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="script.js"></script>
 </head>
-<body class="bg-[FFC0CB]">
+<body class="bg-[FFC0CB] text-center">
     <h1 class="text-4xl text-center my-10 text-[#E3242B] font-bold">I knew you would say yes!</h1>
-    <img src="./assets/pink_emoji.png" class="w-96 h-96 mx-auto">
+    <img src="assets/pink_emoji.png" class="w-96 h-96 mx-auto">
+
+    <button class="inline-block bg-red-500 my-5 px-6 py-2 text-white text-base font-semibold rounded-md" onclick="openModal()">Support dev!</button>
+    <div id="modal" class="flex justify-center hidden">
+        <div class="relative">
+            <button class="absolute right-0 top-0 w-8 h-8 rounded-full bg-gray-200 text-lg text-gray-500 font-bold" onclick="closeModal()">&times;</button>
+            <img class="my-10 w-64 h-64" src="assets/placeholder.png">
+        </div>
+    </div>
 </body>
 </html>

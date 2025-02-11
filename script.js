@@ -42,3 +42,16 @@ window.onload = () => {
         }, 500);
     }
 }
+
+const openModal = () => {
+    let modal = document.getElementById("modal");
+    modal.classList.remove("hidden");
+    modal.classList.add("block")
+}
+
+let close = document.getElementById("close");
+
+const closeModal = () => {
+    modal.classList.remove("block");
+    modal.classList.add("hidden");
+}
